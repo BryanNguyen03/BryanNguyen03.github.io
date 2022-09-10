@@ -3,3 +3,27 @@
 body {
     background-color: turquoise;
 }
+
+.InfoContainer {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    margin-top: 10%;
+    text-align: center;
+    z-index: -2;
+    height: 15vh;
+}
+
+.InfoContainer p {
+    color: #000;
+    font-size: 20px;
+}
+
+.languages {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    z-index: -2;
+    text-align: center;
+    height: 10vh;
+}
