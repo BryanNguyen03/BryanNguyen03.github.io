@@ -14,25 +14,25 @@ body {
     display: flex;
     width: 90vw;
     height: 80vh;
-
 }
 
 .panel {
     cursor: pointer;
-    /*
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    */
-    background-color: gray;
     z-index: 500;
     height: 80vh;
     border-radius: 50px;
+    background-color: turquoise;
+    border-style: solid;
+    border-color: #222;
     flex: 0.5;
     margin: 10px;
     top: 40px;
     position: relative;
     -webkit-transition: all 700ms ease-in;
+}
+
+.panel:hover {
+    background-color: #222;
 }
 
 .panel h3, .projectLink, .workInfo {
@@ -43,12 +43,15 @@ body {
     left: 20px;
     margin: 0;
     opacity: 0;
+    pointer-events: none;
 }
+
 
 .panel.active h3, .projectLink{
     color: white;
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
+    pointer-events: auto;
 }
 
 .panel.active .workInfo{
@@ -59,12 +62,19 @@ body {
     top: 20px;
 }
 
-.panel .projectLink {
+.gitIcon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.panel .projectLink:hover{
     cursor: pointer;
+    color: #c0392b;
 }
 
 .panel.active {
-    background-color: #222;
     flex: 5;
+    background-color: #222;
     cursor: default;
 }
