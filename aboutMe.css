@@ -27,3 +27,7 @@ body {
     text-align: center;
     height: 10vh;
 }
+
+.langIcon:hover {
+    box-shadow: 5px 10px 30px;
+}
