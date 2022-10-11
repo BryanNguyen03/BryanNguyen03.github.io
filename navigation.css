@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Open sans', sans-serif;
-    color: #222;
     padding-bottom: 50px;
 }
 
@@ -17,7 +16,7 @@ body {
 
 .navbar {
     position: fixed;
-    background-color: #222;
+    background-color: #151515;
     top: 0;
     left: 0;
     right: 0;
@@ -70,6 +69,10 @@ body {
 
 .navbar a.current,
 .navbar a:hover {
-    color: #c0392b;
+    color: turquoise;
     font-weight: bold;
+}
+
+.navbar.active img{
+    width: 25;
 }

@@ -1,7 +1,7 @@
 @import "navigation.css";
 
 body {
-    background-color: turquoise;
+    background-color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@ body {
     z-index: 500;
     height: 80vh;
     border-radius: 50px;
-    background-color: turquoise;
+    background-color: gray;
     border-style: solid;
     border-color: #222;
     flex: 0.5;
@@ -29,14 +29,15 @@ body {
     top: 40px;
     position: relative;
     -webkit-transition: all 700ms ease-in;
+    background-image: none;
 }
 
 .panel:hover {
     background-color: #222;
 }
 
-.panel h3, .projectLink, .workInfo {
-    font-size: 30px;
+.panel h3, .projectLink, .projInfo {
+    font-size: 150%;
     position: absolute;
     text-decoration: none;
     bottom: 20px;
@@ -54,7 +55,7 @@ body {
     pointer-events: auto;
 }
 
-.panel.active .workInfo{
+.panel.active .projInfo{
     color: white;
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
@@ -70,7 +71,7 @@ body {
 
 .panel .projectLink:hover{
     cursor: pointer;
-    color: #c0392b;
+    color: turquoise;
 }
 
 .panel.active {
