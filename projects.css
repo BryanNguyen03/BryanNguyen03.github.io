@@ -1,7 +1,7 @@
-@import "navigation.css";
+@import "projectPageNav.css";
 
 body {
-    background-color: #222;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,8 +22,6 @@ body {
     height: 80vh;
     border-radius: 15px;
     background-color: gray;
-    border-style: solid;
-    border-color: #222;
     flex: 0.5;
     margin: 10px;
     top: 40px;
