@@ -27,30 +27,40 @@
 }
 
 .AboutMe{
-    text-align: center;
+    text-align: left;
+    width: 30%;
+    left: 20%;
+    position: relative;
 }
 
+
+
 .AboutMe h2,
-.AboutMe h3 {
+.AboutMe h3,
+.languages h3,
+.contactInfo h3 {
   font-size: 150%;
   margin: 20px 0;
 }
 
-.AboutMe p {
+.AboutMe p, .contactInfo p {
   color: #555;
   line-height: 30px;
   letter-spacing: 1.2px;
 }
 
-.contactInfo p {
-    color: #555;
-    line-height: 30px;
-    letter-spacing: 1.2px;
+.contactInfo{
+    position: relative;
+    right: 20%;
+    text-align: right;
 }
 
 .contactInfo a {
     text-decoration: none;
-    color: black;
+    color: #151515;
+    border-radius: 5px;
+    border: solid;
+    border-width: 2px;
 }
 
 .contactInfo a:hover {
@@ -58,17 +68,11 @@
     transition: all 0.3s ease-in-out;
 }
 
-.languages {
-    margin: auto;
-    width: 60%;
-    padding: 10px;
-    z-index: -2;
-    text-align: center;
-    height: 10vh;
-    display: relative;
+.languages{
+    position: relative;
+    left: 20%;
 }
 
 .langIcon:hover {
     box-shadow: 5px 10px 30px;
 }
-

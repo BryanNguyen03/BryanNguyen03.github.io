@@ -56,7 +56,7 @@ body {
 .panel.active .projectName, .panel.active .projectLink{
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
-    color: black;
+    color: white;
     position: absolute;
     left: 20px;
     bottom: 40px;
@@ -69,7 +69,7 @@ body {
 
 .panel.active .projectInfo{
     opacity: 1;
-    color: black;
+    color: white;
     transition: opacity 0.3s ease-in 0.7s;
     position: absolute;
     top: 20px;
@@ -78,6 +78,7 @@ body {
 }
 
 .panel.active .langIcon{
+    transition: opacity 0.3s ease-in 0.7s;
     opacity: 1;
     width: 25%;
     left: 37%;
@@ -86,6 +87,7 @@ body {
 }
 
 .panel.active .proj1Icons{
+    transition: opacity 0.3s ease-in 0.7s;
     opacity: 1;
     position: absolute;
     top: 27%;
