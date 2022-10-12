@@ -16,7 +16,7 @@ body {
 
 .navbar {
     position: fixed;
-    background-color: #151515;
+    background-color: white;
     top: 0;
     left: 0;
     right: 0;
@@ -40,27 +40,27 @@ body {
 }
 
 .navbar h1 {
-    color: white;
+    color: #151515;
 }
 
 .navbar.active h1 {
-    color: #000;
+    color: white;
 }
 
 .navbar a {
-    color: white;
+    color: #222;
     text-decoration: none;
     padding: 7px 16px;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar.active {
-    background-color: #fff;
+    background-color: #151515;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.active a {
-    color: #000;
+    color: white;
 }
 
 .navbar.active .navcontainer{

@@ -1,7 +1,7 @@
 @import "navigation.css";
 
 .hero {
-    background-image: url('images/backgroundImage.jpg');
+    background-image: linear-gradient(to bottom right, blue, turquoise);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -20,7 +20,7 @@ body {
     cursor: pointer;
     z-index: 500;
     height: 80vh;
-    border-radius: 50px;
+    border-radius: 15px;
     background-color: gray;
     border-style: solid;
     border-color: #222;
@@ -32,35 +32,9 @@ body {
     background-image: none;
 }
 
-.panel:hover {
-    background-color: #222;
-}
-
-.panel h3, .projectLink, .projInfo {
-    font-size: 150%;
-    position: absolute;
-    text-decoration: none;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
-    pointer-events: none;
-}
-
-
-.panel.active h3, .projectLink{
-    color: white;
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-    pointer-events: auto;
-}
-
-.panel.active .projInfo{
-    color: white;
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-    size: 10px;
-    top: 20px;
+.panel.active {
+    flex: 5;
+    cursor: default;
 }
 
 .gitIcon {
@@ -69,13 +43,56 @@ body {
     right: 20px;
 }
 
-.panel .projectLink:hover{
-    cursor: pointer;
+.panel .projectLink, .projectName{
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+}
+
+.panel .projectName, .projectLink, .projectInfo, .langIcon, .proj1Icons{
+    opacity: 0;
+}
+
+.panel.active .projectName, .panel.active .projectLink{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    color: black;
+    position: absolute;
+    left: 20px;
+    bottom: 40px;
+    text-decoration: none;
+}
+
+.panel.active .projectLink:hover{
     color: turquoise;
 }
 
-.panel.active {
-    flex: 5;
-    background-color: #222;
-    cursor: default;
+.panel.active .projectInfo{
+    opacity: 1;
+    color: black;
+    transition: opacity 0.3s ease-in 0.7s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 130%;
+}
+
+.panel.active .langIcon{
+    opacity: 1;
+    width: 25%;
+    left: 37%;
+    top: 27%;
+    position: absolute;
+}
+
+.panel.active .proj1Icons{
+    opacity: 1;
+    position: absolute;
+    top: 27%;
+    left: 30%;
+    letter-spacing: 100px;
+}
+
+.panel.active .proj1Icons .proj1Icon{
+    width: 35%;
 }
