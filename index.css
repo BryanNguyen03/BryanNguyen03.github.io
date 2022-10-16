@@ -55,6 +55,8 @@
     text-align: right;
 }
 
+
+
 .contactInfo a {
     text-decoration: none;
     color: #151515;
@@ -69,7 +71,7 @@
 }
 
 .languages{
-    position: relative;
+    position: absolute;
     left: 20%;
 }
 
