@@ -1,7 +1,7 @@
-@import "projectPageNav.css";
+@import "navigation.css";
 
 body {
-    background-color: white;
+    background-image: linear-gradient(to bottom right, blue, turquoise);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,89 +10,57 @@ body {
     margin: 0;
 }
 
+h2 {
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    background-color: #151515;
+    margin: 0 0 2rem 0;
+    font-size: 1.5rem;
+    color: white;
+    height: 15vh;
+    padding: 70px 0;
+}
+
 .container {
     display: flex;
-    width: 90vw;
-    height: 80vh;
+    max-width: 1500px;
+    flex-wrap: wrap;
 }
 
 .panel {
-    cursor: pointer;
-    z-index: 500;
-    height: 80vh;
-    border-radius: 15px;
-    background-color: gray;
-    flex: 0.5;
-    margin: 10px;
-    top: 40px;
-    position: relative;
-    -webkit-transition: all 700ms ease-in;
-    background-image: none;
+    margin: 1rem;
+    background: white;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all .2s linear;
+    text-align: center;
+    height: 45vh;
+}
+  
+.panel:hover {
+    box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+    transform: translate3D(0, -20px, 0);
 }
 
-.panel.active {
-    flex: 5;
-    cursor: default;
+.panel .gitIcon img{
+    width: 200px;
 }
 
-.gitIcon {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+.panel p {
+    justify-content: center;
+    font-size: 17px;
 }
 
-.panel .projectLink, .projectName{
-    position: absolute;
-    left: 20px;
-    bottom: 40px;
+@media screen and (min-width: 600px) {
+
+    .panel {
+      flex: 1 1 calc(50% - 2rem);
+    }
 }
 
-.panel .projectName, .projectLink, .projectInfo, .langIcon, .proj1Icons{
-    opacity: 0;
-}
-
-.panel.active .projectName, .panel.active .projectLink{
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-    color: white;
-    position: absolute;
-    left: 20px;
-    bottom: 40px;
-    text-decoration: none;
-}
-
-.panel.active .projectLink:hover{
-    color: turquoise;
-}
-
-.panel.active .projectInfo{
-    opacity: 1;
-    color: white;
-    transition: opacity 0.3s ease-in 0.7s;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 130%;
-}
-
-.panel.active .langIcon{
-    transition: opacity 0.3s ease-in 0.7s;
-    opacity: 1;
-    width: 25%;
-    left: 37%;
-    top: 27%;
-    position: absolute;
-}
-
-.panel.active .proj1Icons{
-    transition: opacity 0.3s ease-in 0.7s;
-    opacity: 1;
-    position: absolute;
-    top: 27%;
-    left: 30%;
-    letter-spacing: 100px;
-}
-
-.panel.active .proj1Icons .proj1Icon{
-    width: 35%;
+@media screen and (min-width: 900px) {
+    .panel {
+      flex: 1 1 100px;
+    }
 }
