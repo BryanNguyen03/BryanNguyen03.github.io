@@ -172,9 +172,14 @@ html {
 }
 
 /* Responsive  */
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1600px) {
+  #projects {
+    width: 80%;
+  }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
+  #projects {
+    width: 100%;
+  }
 }
