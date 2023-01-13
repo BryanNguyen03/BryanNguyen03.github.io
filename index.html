@@ -1,58 +1,161 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Home</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bryan's Website</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-    <body>
-        <nav class="navbar">
-            <div class="navcontainer">
-                <h1>Bryan</h1>
-                <ul>
-                    <li><a href="" class="current">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="mailto:bryan2.nguyen@ryerson.ca">Contact Me</a></li>
-                    <li><a href="https://github.com/BryanNguyen03"><img width="35" id="gitIcon" src="images/githubOnWhite.png" alt="git hub icon"/></a></li>
-                    <li><a href="https://www.linkedin.com/in/bryan-nguyen-2a6066220/"><img width="25" id="linkedinIcon" src="images/linkedinOnWhite.png" alt="linkedIn icon"/></a></li>
-                </ul>
-            </div>
-        </nav>
+  <body>
+    <nav class="navbar">
+      <div class="navcontainer">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#AboutMe">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contactInfo">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <div class="hero">
-            <div class="container">
-                <h1>Hi, I'm Bryan Nguyen</h1>
-                <p>A second year computer science student with a passion for learning and improving.</p>
-            </div>  
+    <div id="home">
+      <div class="container">
+        <h1>Hi, I'm Bryan Nguyen</h1>
+        <p>
+          A second year computer science student with a passion for learning and
+          improving.
+        </p>
+      </div>
+    </div>
+
+    <div id="AboutMe">
+      <h2>About Me</h2>
+      <p>
+        I'm a 2nd-year computer science student at Toronto Metropolitan
+        University. I enjoy playing volleyball, learning or improving
+        skills/hobbies, and listening to music.
+      </p>
+
+      <p>
+        I have experience working with Python, Java, C, SQL, ReactJS and RESTful
+        APIs through my personal and academic projects. I am hoping to apply the
+        skills that I have and grow as a developer through experience in the
+        tech field.
+      </p>
+
+      <div id="languages">
+        <img
+          class="langIcon"
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+          alt="c"
+          width="40"
+          height="40"
+        />
+        <img
+          class="langIcon"
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+          alt="css3"
+          width="40"
+          height="40"
+        />
+        <img
+          class="langIcon"
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+          alt="html5"
+          width="40"
+          height="40"
+        />
+        <img
+          class="langIcon"
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+          alt="java"
+          width="40"
+          height="40"
+        />
+        <img
+          class="langIcon"
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+          alt="python"
+          width="40"
+          height="40"
+        />
+        <img
+          class="langIcon"
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+          alt="mysql"
+          width="40"
+          height="40"
+        />
+      </div>
+    </div>
+
+    <div id="projects">
+      <h2 class="projects-header">Projects</h2>
+      <div class="project-list">
+        <div class="panel">
+          <h3 class="project-title">Login System</h3>
+          <p class="project-desc">
+            This project uses Python and a MySQL database to mimic a school
+            login system. The project allows 3 types of accounts, each with its
+            features. A detailed description can be found on the GitHub page.
+          </p>
+          <div class="github-button">
+            <a href="https://github.com/BryanNguyen03/School-Management-System"
+              ><button>Github Page</button></a
+            >
+          </div>
         </div>
 
-        <div class="AboutMe">
-            <h2>About Me</h2>
-            <p>I am a computer science student looking to gain experience and learn more about the tech field. I have experience with Python, Java, C, SQL, web development and am hoping to grow as a developer. I am easy to work with as I have experience working in teams and I am open to taking any advice and criticism given. I have a strong work ethic and love problem solving. I hope to find opportunities to help me grow as a programmer and develop my skills.</p>
+        <div class="panel">
+          <h3 class="project-title">Pokedex</h3>
+          <p class="project-desc">
+            This web application uses ReactJS and a RESTful API to display
+            Pokemon entries to the user. Users can specify the amount of Pokemon
+            they want to be listed or search for a specific Pokemon
+          </p>
+          <div class="github-button">
+            <a href="https://github.com/BryanNguyen03/Pokedex"
+              ><button>Github Page</button></a
+            >
+          </div>
         </div>
 
-        <div class="contactInfo">
-            <h3>Contact Me</h3>
-            <p>Bryan2.Nguyen@ryerson.ca</p>
-            <p>647-995-3500</p>
-            <p><a href="https://www.linkedin.com/in/bryan-nguyen">My Linkedin</a></p>
-        </div>
-        
-        <div class="languages">
-            <h3>Languages</h3>
-            <img class="langIcon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/>
-            <img class="langIcon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
-            <img class="langIcon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
-            <img class="langIcon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
-            <img class="langIcon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
-            <img class="langIcon" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="mysql" width="40" height="40">
+        <div class="panel">
+          <h3 class="project-title">Wordle in C</h3>
+          <p class="project-desc">
+            This project was a program that I wrote over the summer to learn the
+            basics of the programming language C and the basics of git and Git
+            Hub. Users have 6 guesses to guess a 5 letter word.
+          </p>
+          <div class="github-button">
+            <a href="https://github.com/BryanNguyen03/Wordle-in-C"
+              ><button>Github Page</button></a
+            >
+          </div>
         </div>
 
-        
+        <div class="panel">
+          <h3 class="project-title">Ecommerce User Interface</h3>
+          <p class="project-desc">
+            A final project was developed for the CPS209 course at TMU. The
+            project includes core concepts such as OOP, error handling, and test
+            cases. Users can manage their shopping cart and order/cancel items
+            accordingly.
+          </p>
+        </div>
+      </div>
+    </div>
 
-        <script src="index.js"></script>
-    </body>
+    <div id="contactInfo">
+      <h3>Contact Me</h3>
+      <p>Bryan2.Nguyen@ryerson.ca</p>
+      <p>647-995-3500</p>
+      <a href="https://www.linkedin.com/in/bryan-nguyen"
+        ><button>My Linkedin</button></a
+      >
+    </div>
 
+    <script src="index.js"></script>
+  </body>
 </html>
