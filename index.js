@@ -1,42 +1,45 @@
-//Navigation bar
-const navbar = document.querySelector('.navbar')
-window.addEventListener('scroll', fixNav)
+//Navigation bar functionality
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", fixNav);
 
 function fixNav() {
-    if(window.scrollY > navbar.offsetHeight + 150){
-        navbar.classList.add('active')
-        iconsOnWhite()
-    }
-    else {
-        navbar.classList.remove('active')
-        iconsOnBlack()
-    }
+  if (window.scrollY > navbar.offsetHeight + 150) {
+    navbar.classList.add("active");
+  } else {
+    navbar.classList.remove("active");
+  }
 }
 
-//Functions for changing github and linkedin Icon whenever nav bar is active
-function iconsOnWhite() {
-    document.getElementById("gitIcon").src = "images/githubIcon.png"
-    document.getElementById("linkedinIcon").src = "images/LinkedinIcon.png"
+// technology tags
+const technologies = [
+  "Python",
+  "Java",
+  "JavaScript",
+  "TypeScript",
+  "MongoDB",
+  "Express.js",
+  "React.js",
+  "Node.js",
+  "MySQL",
+  "HTML",
+  "CSS",
+  "Git",
+  "Jira",
+];
+
+const tagsContainer = document.getElementById("tagsContainer");
+
+// Function to create a tag element
+function createTag(tech) {
+  const tag = document.createElement("div");
+  tag.classList.add("tag");
+  tag.textContent = tech;
+
+  return tag;
 }
 
-function iconsOnBlack() {
-    document.getElementById("gitIcon").src = "images/githubOnWhite.png"
-    document.getElementById("linkedinIcon").src = "images/linkedinOnWhite.png"
-}
-
-//Expanding Cards for projects page
-const panels = document.querySelectorAll('.panel')
-
-panels.forEach(panel => {
-    panel.addEventListener('click', () => {
-        removeActiveClasses()
-        panel.classList.add('active')
-    })
-})
-
-function removeActiveClasses(){
-    panels.forEach(panel => {
-        panel.classList.remove('active')
-    })
-}
-
+// Populate the tags container with tags
+technologies.forEach((tech) => {
+  const tag = createTag(tech);
+  tagsContainer.appendChild(tag);
+});

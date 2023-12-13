@@ -3,159 +3,232 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Bryan's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan Nguyen</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/Rover-bw.png  ">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
     <nav class="navbar">
-      <div class="navcontainer">
+      <div class="nav-container">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#AboutMe">About Me</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contactInfo">Contact Me</a></li>
+          <li><a href="#contact-info">Contact Me</a></li>
         </ul>
       </div>
     </nav>
 
+    <!--==================== HOME ====================-->
     <div id="home">
-      <div class="container">
-        <h1>Hi, I'm Bryan Nguyen</h1>
-        <p>
-          A second year computer science student with a passion for learning and
-          improving.
+      <div class="home-container">
+        <h1>Hi, I'm Bryan</h1>
+        <div class="typing-text">
+          I'm a  <span></span>
+        </div>
+      </div>
+      <img src="images/running 1.png" alt="astronaut">
+    </div>
+
+    <!--==================== ABOUT ME ====================-->
+    <div id="about-me">
+      <div id="about-me-text">
+        <h2 class="section-header">About Me</h2>
+        <p> 
+          Hi, I'm Bryan! I'm a 3rd-year CS student @ Toronto Metropolitan University. I enjoy playing sports, specifically Volleyball and Basketball, and generally enjoy being active. If you catch me listening to music, it's most likely J-rock/J-pop, math rock, progressive rock, or anything that weaves intricate guitar and string melodies! I love learning and developing new things especially when I tie them into my interests hence the common Pokemon theme among some of my projects.
+          <br><br>
+          Aside from my interests, I have experience working with multiple technologies, primarily focusing on software development using the MERN stack. Currently I am working on a new application that uses OpenAI as I believe AI is something that has a lot of potentials, and would be a great learning experience.
+          <br><br>
+          I am always looking to learn and contribute to creative or innovative projects, and hope to continue to grow as a developer!
         </p>
+
+        <div id="tagsContainer"></div>
+      </div>
+
+      <img src="images/Telescope-bw.png" alt="telescope">
+
+    </div>
+
+    <!--==================== EXPERIENCE ====================-->
+
+    <div id="experience">
+      <h2 class="section-header">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-empty"></div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class="timeline-component timeline-content">
+          <h3>Highschool Co-op Student @ Exceed Robotics</h3>
+          <p>Sep 2019 - Dec 2019</p>
+        </div>
+
+        <div class="timeline-component timeline-content">
+          <h3>Data Engineer Intern @ WSIB</h3>
+          <p>May 2023 - Dec 2023</p>
+        </div>
+
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class="timeline-empty"></div>
+        <div class="timeline-empty"></div>
+        <div class="timeline-middle">
+          <div class="timeline-circle"></div>
+        </div>
+
+        <div class="timeline-component timeline-content">
+          <h3>TBA</h3>
+        </div>
+
       </div>
     </div>
 
-    <div id="AboutMe">
-      <h2>About Me</h2>
-      <p>
-        I'm a 2nd-year computer science student at Toronto Metropolitan
-        University. I enjoy playing volleyball, learning or improving
-        skills/hobbies, and listening to music.
-      </p>
-
-      <p>
-        I have experience working with Python, Java, C, SQL, ReactJS and RESTful
-        APIs through my personal and academic projects. I am hoping to apply the
-        skills that I have and grow as a developer through experience in the
-        tech field.
-      </p>
-
-      <div id="languages">
-        <img
-          class="langIcon"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
-          alt="c"
-          width="40"
-          height="40"
-        />
-        <img
-          class="langIcon"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
-          alt="css3"
-          width="40"
-          height="40"
-        />
-        <img
-          class="langIcon"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-          alt="html5"
-          width="40"
-          height="40"
-        />
-        <img
-          class="langIcon"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
-          alt="java"
-          width="40"
-          height="40"
-        />
-        <img
-          class="langIcon"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-          alt="python"
-          width="40"
-          height="40"
-        />
-        <img
-          class="langIcon"
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-          alt="mysql"
-          width="40"
-          height="40"
-        />
-      </div>
-    </div>
-
+    <br><br>
+    
+    <!--==================== PROJECTS ====================-->
+    <!-- Swiper -->
     <div id="projects">
-      <h2 class="projects-header">Projects</h2>
-      <div class="project-list">
-        <div class="panel">
-          <h3 class="project-title">Login System</h3>
-          <p class="project-desc">
-            This project uses Python and a MySQL database to mimic a school
-            login system. The project allows 3 types of accounts, each with its
-            features. A detailed description can be found on the GitHub page.
-          </p>
-          <div class="github-button">
-            <a href="https://github.com/BryanNguyen03/School-Management-System"
-              ><button>Github Page</button></a
-            >
+      <h2 class="section-header">Projects</h1>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+
+
+          <!-- Project 1 -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-container">
+              <div class="proj-img">
+                <img src="images/StorePreview.gif" alt="poke-market preview">
+              </div>
+
+              <div class="project-info">
+                <h3 class="project-title">Poke-Market</h3>
+                <p class="slide-desc">
+                  A full stack web application built on the MERN stack with Typescript. Using Bcrypt to ensure secure user
+                  authentication and encryption and a RESTful API to allow
+                  users to register and collect Pokemon!
+                </p>
+              
+                <div class="github-button">
+                  <a href="https://github.com/BryanNguyen03/Poke-Market" target="_blank">
+                    <button>Github Page</button>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Project 2-->
+          <div class="swiper-slide">
+            <div class="swiper-slide-container">
+              <div class="proj-img">
+                <img src="images/WebsitePreview.png" alt="poke-market preview">
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">Pokedex</h3>
+                <p class="slide-desc">
+                  This web application uses ReactJS and a RESTful API to display
+                  Pokemon entries to the user. Users can specify the amount of
+                  Pokemon they want to be listed or search for a specific Pokemon
+                </p>
+              
+                <div class="github-button">
+                  <a href="https://github.com/BryanNguyen03/Pokedex" target="_blank">
+                    <button>Github Page</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div class="swiper-slide">
+            <div class="no-img-container">
+              <div class="swiper-slide-container-2">
+                <h3 class="project-title">Web Traffic Management</h3>
+                <p class="slide-desc">
+                  This is a project developed for CPS406 (Introduction to Software Engineering) at TMU. 
+                  The web application was developed by a team of 6 using Agile methodology. The website mimics 
+                  the design of a server management system, where the main purpose of this project was to learn and 
+                  understand the software development life cycle process (specifically the Agile model).
+                </p>
+                <div class="github-button">
+                  <a href="https://github.com/BryanNguyen03/Web-Traffic-Management" target="_blank">
+                    <button>Github Page</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4 -->
+          <div class="swiper-slide">
+            <div class="no-img-container">
+              <div class="swiper-slide-container-2">
+                <h3 class="project-title">Login System</h3>   
+                <centre><p class="slide-desc">
+                  This is a very basic project that I developed in Aug 2022 to get a better understanding of relational databases. The program uses Python and a MySQL database to mimic a school login system. 
+                  The project allows 3 types of accounts, each with its features. A more detailed description can be found on the GitHub page.
+                </p></centre>
+                
+
+                <div class="github-button">
+                  <a href="https://github.com/BryanNguyen03/School-Management-System" target="_blank">
+                    <button>Github Page</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
 
-        <div class="panel">
-          <h3 class="project-title">Pokedex</h3>
-          <p class="project-desc">
-            This web application uses ReactJS and a RESTful API to display
-            Pokemon entries to the user. Users can specify the amount of Pokemon
-            they want to be listed or search for a specific Pokemon
-          </p>
-          <div class="github-button">
-            <a href="https://github.com/BryanNguyen03/Pokedex"
-              ><button>Github Page</button></a
-            >
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3 class="project-title">Wordle in C</h3>
-          <p class="project-desc">
-            This project was a program that I wrote over the summer to learn the
-            basics of the programming language C and the basics of git and Git
-            Hub. Users have 6 guesses to guess a 5 letter word.
-          </p>
-          <div class="github-button">
-            <a href="https://github.com/BryanNguyen03/Wordle-in-C"
-              ><button>Github Page</button></a
-            >
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3 class="project-title">Ecommerce User Interface</h3>
-          <p class="project-desc">
-            A final project was developed for the CPS209 course at TMU. The
-            project includes core concepts such as OOP, error handling, and test
-            cases. Users can manage their shopping cart and order/cancel items
-            accordingly.
-          </p>
-        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
-    <div id="contactInfo">
+    <!--==================== CONTACT ME ====================-->
+    <div id="contact-info">
       <h3>Contact Me</h3>
       <p>Bryan2.Nguyen@ryerson.ca</p>
-      <p>647-995-3500</p>
-      <a href="https://www.linkedin.com/in/bryan-nguyen"
-        ><button>My Linkedin</button></a
-      >
+      <a href="https://www.linkedin.com/in/bryan-nguyen" target="_blank">
+        <button>My Linkedin</button>
+      </a>
     </div>
 
+    <!--==================== SCRIPTS ====================-->
     <script src="index.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true, // Enable clickable pagination bullets
+        },
+        mousewheel: true,
+        keyboard: true,
+      });
+    </script>
   </body>
 </html>
