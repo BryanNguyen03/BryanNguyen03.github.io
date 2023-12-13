@@ -459,18 +459,15 @@ body {
   #projects {
     max-width: 100%;
   }
+
   #home h1 {
     font-size: 2rem;
   }
 
-  #home img,
-  #about-me img {
-    max-width: 0px;
-  }
-
   .swiper-slide-container img {
-    height: 0px;
-    width: 0px;
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
   }
 
   #contact-me {
@@ -484,5 +481,29 @@ body {
 
   .timeline-middle {
     height: 210px;
+  }
+
+  .swiper .slide-desc {
+    font-size: 0.5rem;
+    line-height: 20px;
+  }
+
+  .swiper .project-title {
+    font-size: 0.5rem;
+  }
+
+  .swiper-slide-container {
+    flex-direction: column;
+  }
+
+  .swiper-slide-container-2 {
+    font-size: 0.5rem;
+    max-width: 100%;
+    border-radius: 1px;
+  }
+
+  .github-button button {
+    padding: 5px 10px;
+    font-size: 0.5rem;
   }
 }
