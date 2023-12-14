@@ -99,7 +99,7 @@ body {
   }
   51%,
   75% {
-    content: "volleyball player";
+    content: "recreational athlete";
   }
   76%,
   100% {
@@ -292,6 +292,10 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: #f4f4f4;
 }
 
 .github-button button {
