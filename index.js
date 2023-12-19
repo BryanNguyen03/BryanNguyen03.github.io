@@ -14,6 +14,7 @@ function fixNav() {
 const technologies = [
   "Python",
   "Java",
+  "C",
   "JavaScript",
   "TypeScript",
   "MongoDB",
