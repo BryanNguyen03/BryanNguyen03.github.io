@@ -65,7 +65,7 @@ body {
 }
 
 .typing-text span::before {
-  content: "3rd year CS student";
+  content: "4th year CS student";
   color: #151515;
   animation: words 20s infinite;
 }
@@ -91,7 +91,7 @@ body {
 @keyframes words {
   0%,
   25% {
-    content: "3rd year CS student";
+    content: "4th year CS student";
   }
   26%,
   50% {
