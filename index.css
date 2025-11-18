@@ -298,7 +298,7 @@ body {
   background-color: #f4f4f4;
 }
 
-.github-button button {
+.github-button a {
   background-color: #f4f4f4;
   font-family: "Inter", sans-serif;
   color: #151515;
@@ -309,9 +309,10 @@ body {
   font-size: 15px;
   align-self: center;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
-.github-button button:hover {
+.github-button a:hover {
   background-color: #cccccc;
 }
 
