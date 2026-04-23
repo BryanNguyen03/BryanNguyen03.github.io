@@ -16,6 +16,7 @@ const technologies = [
   "Java",
   "JavaScript",
   "TypeScript",
+  "Go",
   "MongoDB",
   "PostgreSQL",
   "MySQL",

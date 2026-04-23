@@ -1,6 +1,10 @@
 @import "navigation.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
@@ -13,51 +17,56 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .section-header {
-  font-size: 30px;
+  font-size: clamp(1.4rem, 3vw, 1.875rem);
   color: #f4f4f4;
   padding-bottom: 20px;
   padding-top: 20px;
+  margin: 0;
 }
 
 /* ===== Home Section ===== */
 #home {
   background-color: #f4f4f4;
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 50vh;
+  gap: 40px;
+  padding: clamp(40px, 8vw, 80px) clamp(20px, 6vw, 80px);
 }
 
 .home-container {
   padding: 20px;
+  flex-shrink: 0;
 }
 
 #home img {
-  max-width: 50%;
-  max-height: auto;
+  width: clamp(180px, 30vw, 450px);
+  height: auto;
+  flex-shrink: 1;
 }
 
 #home h1 {
-  font-size: 50px;
+  font-size: clamp(1.8rem, 4.5vw, 3.125rem);
   margin: -20px 0 20px;
 }
 
 #home p {
-  font-size: 20px;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
   letter-spacing: 1px;
 }
 
 /* typing text */
 .typing-text {
-  font-size: 20px;
-  min-width: 280px;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  min-width: 220px;
 }
 
 .typing-text span {
@@ -78,7 +87,6 @@ body {
   background-color: #f4f4f4;
   border-left: 2px solid #151515;
   right: -8px;
-  /* 14 */
   animation: cursor 0.8s infinite, typing 25s steps(20) infinite;
 }
 
@@ -135,7 +143,7 @@ body {
 
 /* ===== About Me ===== */
 #about-me {
-  padding: 30px;
+  padding: clamp(30px, 5vw, 60px) clamp(20px, 5vw, 60px);
   padding-top: 50px;
   text-align: left;
   margin: 0 auto;
@@ -143,19 +151,24 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-width: 80%;
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
 }
 
 #about-me img {
-  max-width: 25%;
+  width: clamp(150px, 20vw, 280px);
+  height: auto;
+  flex-shrink: 0;
 }
 
 #about-me p {
   color: #f4f4f4;
-  line-height: 30px;
+  line-height: 1.9;
   letter-spacing: 1.2px;
   padding-bottom: 20px;
   border-radius: 15px;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
 }
 
 #tagsContainer {
@@ -170,24 +183,26 @@ body {
   color: #151515;
   padding: 8px;
   border-radius: 5px;
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
 }
 
-/* ===== Experience =====*/
+/* ===== Experience ===== */
 #experience {
   padding-top: 80px;
+  padding-bottom: 40px;
   text-align: center;
   margin: 0 auto;
+  width: 100%;
   align-items: center;
   justify-content: center;
 }
 
 .timeline {
-  width: 80%;
-  height: auto;
+  width: 90%;
   max-width: 800px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 3px 1fr;
 }
 
 .timeline-content {
@@ -195,19 +210,15 @@ body {
   color: #f4f4f4;
   padding-bottom: 1.75rem;
   transition: 0.4s ease;
-  overflow-wrap: break-word !important;
+  overflow-wrap: break-word;
   margin: 1rem;
-  border-radius: 6px;
+  font-size: clamp(0.75rem, 1.4vw, 1rem);
 }
 
 .timeline-component {
   margin: 0px 20px 20px 20px;
 }
 
-.timeline {
-  display: grid;
-  grid-template-columns: 1fr 3px 1fr;
-}
 .timeline-middle {
   position: relative;
   background-color: #f4f4f4;
@@ -227,65 +238,73 @@ body {
   height: 15px;
   border-radius: 50%;
   background-color: #007aff;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
 /* ===== Projects ===== */
 #projects {
-  padding: 30px;
+  padding: 30px clamp(16px, 4vw, 60px);
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 1000px;
+  width: 100%;
   text-align: center;
 }
 
+/* Swiper: no mousewheel — use arrows/pagination only.
+   Remove mousewheel: true from the JS init to fix the
+   scroll hijack on MacBook Air. */
+
 .swiper-slide-container {
-  font-size: 18px;
+  font-size: clamp(0.85rem, 1.5vw, 1.125rem);
   border-radius: 15px;
-  padding: 80px;
+  padding: clamp(20px, 4vw, 80px);
   padding-top: 15px;
   color: #f4f4f4;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .swiper .slide-desc {
-  font-size: 15px;
-  line-height: 30px;
+  font-size: clamp(0.8rem, 1.3vw, 0.9375rem);
+  line-height: 1.9;
   text-align: left;
   padding-top: 10px;
 }
 
 .swiper-slide-container .project-info {
   text-align: left;
+  flex: 1;
+  min-width: 0;
 }
 
 .swiper .project-title {
-  left: 0;
-  right: 0;
-  margin: auto;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   text-align: left;
+  margin-top: 0;
 }
 
 .swiper-slide-container img {
-  height: 350px;
-  width: auto;
+  height: auto;
+  width: clamp(180px, 35%, 380px);
   border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .swiper-slide-container .proj-img {
-  padding-right: 30px;
+  padding-right: 0;
 }
 
 .swiper-slide-container-2 {
-  font-size: 18px;
+  font-size: clamp(0.85rem, 1.5vw, 1.125rem);
   border-radius: 15px;
-  padding: 100px;
+  padding: clamp(20px, 5vw, 80px);
   color: #f4f4f4;
   display: flex;
   flex-direction: column;
-  max-width: 75%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .no-img-container {
@@ -299,6 +318,7 @@ body {
 }
 
 .github-button a {
+  display: inline-block;
   background-color: #f4f4f4;
   font-family: "Inter", sans-serif;
   color: #151515;
@@ -306,8 +326,7 @@ body {
   padding: 10px 20px;
   border-radius: 3px;
   font-weight: bold;
-  font-size: 15px;
-  align-self: center;
+  font-size: clamp(0.75rem, 1.2vw, 0.9375rem);
   transition: background-color 0.3s ease;
   text-decoration: none;
 }
@@ -321,20 +340,20 @@ body {
 }
 
 /* ===== Contact Me ===== */
-
 #contact-info {
-  padding-top: 50px;
+  padding: 50px 20px;
   text-align: center;
   margin: 0 auto;
   max-width: 1100px;
+  width: 100%;
   color: #f4f4f4;
   border-radius: 15px;
-  font-size: 15px;
+  font-size: clamp(0.85rem, 1.4vw, 0.9375rem);
 }
 
 #contact-info p {
   color: #555;
-  line-height: 30px;
+  line-height: 1.9;
   letter-spacing: 1.2px;
 }
 
@@ -345,6 +364,7 @@ body {
   border: none;
   padding: 10px 20px;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 #contact-info button:hover {
@@ -352,170 +372,17 @@ body {
   transition-duration: 100ms;
 }
 
-/* Responsive */
-/* Tablet */
-@media screen and (min-width: 1030px) and (max-width: 1500px) {
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* Large desktop (1500px+) — already handled by fluid clamp values above */
+
+/* Medium desktop / laptop (1030–1499px) */
+@media screen and (max-width: 1499px) {
   #about-me,
-  #experience,
   #projects {
     max-width: 100%;
-  }
-
-  .swiper-slide-container img {
-    max-width: 500px;
-    height: auto;
-  }
-
-  #home img {
-    max-width: 400px;
-    max-height: auto;
-  }
-
-  #home h1 {
-    font-size: 2.5rem;
-  }
-
-  .swiper-slide-container {
-    flex-direction: column;
-  }
-
-  .swiper-slide-container-2 {
-    max-width: 100%;
-  }
-
-  .swiper .project-title {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  #projects {
-    text-align: center;
-  }
-
-  .swiper-slide-container .project-info {
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1025px) {
-  /* ===== HOME ===== */
-  #home {
-    max-width: 100%;
-    padding-left: 50%;
-    padding-right: 50%;
-  }
-
-  #about-me,
-  #experience,
-  #projects {
-    max-width: 100%;
-  }
-
-  #about-me img {
-    max-width: 0px;
-  }
-
-  .swiper-slide-container img {
-    max-width: 500px;
-    height: auto;
-  }
-
-  #home img {
-    max-width: 400px;
-    max-height: auto;
-  }
-
-  #home h1 {
-    font-size: 2.5rem;
-  }
-
-  .swiper-slide-container {
-    flex-direction: column;
-  }
-
-  .swiper-slide-container-2 {
-    max-width: 100%;
-  }
-
-  .swiper .project-title {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  #projects {
-    text-align: center;
-  }
-
-  .swiper-slide-container .project-info {
-    text-align: center;
-  }
-}
-
-/* Mobile */
-@media screen and (min-width: 300px) and (max-width: 767px) {
-  #home {
-    max-width: 100%;
-    padding-left: 50%;
-    padding-right: 50%;
-  }
-
-  #home h1 {
-    font-size: 2rem;
-  }
-
-  #about-me,
-  #experience,
-  #projects {
-    max-width: 100%;
-  }
-
-  /* about-me */
-  #about-me img {
-    max-width: 0px;
-  }
-
-  #about-me #about-me-text p {
-    font-size: 0.7rem;
-    line-height: 20px;
-  }
-
-  #tagsContainer {
-    gap: 7px;
-  }
-
-  .tag {
-    font-weight: none;
-    padding: 4px;
-    border-radius: 3px;
-    font-size: 0.75rem;
-  }
-
-  /* Experience */
-  .timeline-content {
-    font-size: 0.6rem;
-  }
-
-  /* projects */
-  .swiper-slide-container img {
-    width: 200px;
-    margin-top: 80px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    height: auto;
-    border-radius: 3px;
-  }
-
-  .swiper-slide-container-2 {
-    height: 50%;
-  }
-
-  .swiper .slide-desc {
-    font-size: 0.5rem;
-    line-height: 20px;
-  }
-
-  .swiper .project-title {
-    font-size: 0.5rem;
   }
 
   .swiper-slide-container {
@@ -523,14 +390,160 @@ body {
     align-items: center;
   }
 
-  .swiper-slide-container-2 {
-    font-size: 0.5rem;
-    max-width: 100%;
-    border-radius: 1px;
+  .swiper-slide-container img {
+    width: min(500px, 80%);
   }
 
-  .github-button button {
-    padding: 5px 10px;
-    font-size: 0.5rem;
+  .swiper .project-title {
+    text-align: center;
+  }
+
+  .swiper-slide-container .project-info {
+    text-align: center;
+  }
+
+  .swiper .slide-desc {
+    text-align: center;
+  }
+}
+
+/* Tablet (768–1029px) */
+@media screen and (max-width: 1029px) {
+  #home {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 30px;
+    min-height: 100vh;
+  }
+
+  #home img {
+    width: clamp(140px, 40vw, 300px);
+  }
+
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-me {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 40px 30px;
+  }
+
+  #about-me img {
+    display: none;
+  }
+
+  #tagsContainer {
+    justify-content: center;
+  }
+
+  .swiper-slide-container img {
+    width: min(420px, 80%);
+  }
+}
+
+/* Small tablet / large phone (480–767px) */
+@media screen and (max-width: 767px) {
+  #home {
+    padding: 60px 20px;
+  }
+
+  #home h1 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 0.8rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.75rem;
+  }
+
+  .swiper-slide-container {
+    padding: 20px 16px;
+  }
+
+  .swiper-slide-container img {
+    width: min(320px, 90%);
+  }
+
+  .swiper-slide-container-2 {
+    padding: 20px 16px;
+  }
+}
+
+/* Mobile (max 479px) */
+@media screen and (max-width: 479px) {
+  #home {
+    padding: 50px 16px;
+    min-height: 100svh;
+  }
+
+  #home h1 {
+    font-size: 1.6rem;
+  }
+
+  .typing-text {
+    font-size: 0.9rem;
+    min-width: 180px;
+  }
+
+  #about-me {
+    padding: 30px 16px;
+  }
+
+  #about-me p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
+  .tag {
+    padding: 4px 6px;
+    font-size: 0.7rem;
+  }
+
+  .timeline-content {
+    font-size: 0.65rem;
+  }
+
+  .timeline-middle {
+    height: 120px;
+  }
+
+  #projects {
+    padding: 20px 10px;
+  }
+
+  .swiper-slide-container {
+    padding: 16px 10px;
+  }
+
+  .swiper-slide-container img {
+    width: min(220px, 85%);
+    border-radius: 6px;
+  }
+
+  .swiper-slide-container-2 {
+    padding: 16px 10px;
+  }
+
+  .swiper .project-title {
+    font-size: 1rem;
+  }
+
+  .swiper .slide-desc {
+    font-size: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .github-button a {
+    padding: 8px 14px;
+    font-size: 0.75rem;
   }
 }
