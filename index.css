@@ -250,10 +250,7 @@ body {
   text-align: center;
 }
 
-/* Swiper: no mousewheel — use arrows/pagination only.
-   Remove mousewheel: true from the JS init to fix the
-   scroll hijack on MacBook Air. */
-
+/* Update this section in your CSS */
 .swiper-slide-container {
   font-size: clamp(0.85rem, 1.5vw, 1.125rem);
   border-radius: 15px;
@@ -262,35 +259,41 @@ body {
   color: #f4f4f4;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.swiper .slide-desc {
-  font-size: clamp(0.8rem, 1.3vw, 0.9375rem);
-  line-height: 1.9;
-  text-align: left;
-  padding-top: 10px;
+  align-items: center; /* Changed from flex-start to center */
+  justify-content: center; /* Ensures content stays centered in the slide */
+  gap: 40px; /* Increased gap for better breathing room */
+  min-height: 450px; /* Gives a consistent height to the slider */
 }
 
 .swiper-slide-container .project-info {
   text-align: left;
   flex: 1;
-  min-width: 0;
-}
-
-.swiper .project-title {
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  text-align: left;
-  margin-top: 0;
+  min-width: 300px; /* Prevents the text from getting too narrow */
+  max-width: 500px; /* Prevents text from stretching too wide on ultrawide screens */
 }
 
 .swiper-slide-container img {
   height: auto;
-  width: clamp(180px, 35%, 380px);
+  width: clamp(250px, 35vw, 450px); /* Slightly increased minimum width */
   border-radius: 10px;
   flex-shrink: 0;
+  object-fit: contain; /* Ensures the image doesn't distort */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Optional: adds depth to the preview */
 }
+
+
+.swiper .project-title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem); /* Slightly larger titles */
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.swiper .slide-desc {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.6;
+  text-align: left;
+}
+
 
 .swiper-slide-container .proj-img {
   padding-right: 0;
