@@ -99,11 +99,11 @@ body {
 @keyframes words {
   0%,
   25% {
-    content: "4th year CS student";
+    content: "software developer";
   }
   26%,
   50% {
-    content: "software developer";
+    content: "keyboard collector";
   }
   51%,
   75% {
